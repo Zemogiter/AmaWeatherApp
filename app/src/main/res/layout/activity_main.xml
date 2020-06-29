@@ -9,24 +9,24 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay"
-        android:background="#FFFFFF">
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
 
         <TextView
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
             android:gravity="center"
             android:minHeight="?actionBarSize"
             android:padding="@dimen/appbar_padding"
             android:text="@string/app_name"
+            android:textAlignment="textStart"
             android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
             android:textColor="@color/topBarTextColor"
-            android:textAlignment="textStart"
-            tools:ignore="RtlCompat"
-            android:background="@color/colorPrimary"/>
+            tools:ignore="RtlCompat" />
 
         <Button
             android:id="@+id/buttonIMGW"
@@ -53,7 +53,7 @@
             android:text="@string/button_3" />
 
         <Button
-            android:id="@+id/buttonSELLECTCITY"
+            android:id="@+id/buttonSELECTCITY"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -61,7 +61,7 @@
             android:text="@string/button_4" />
 
         <Button
-            android:id="@+id/buttonSELLECTCITY2"
+            android:id="@+id/buttonSELECTCITY2"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -76,10 +76,6 @@
             android:layout_gravity="center_horizontal"
             android:text="@string/options" />
 
-        <com.google.android.gms.maps.MapView
-            android:id="@+id/mapView"
-            android:layout_width="match_parent"
-            android:layout_height="432dp" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

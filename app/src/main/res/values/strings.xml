@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">AmaWeatherApp</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
     <string name="button_1">Wybierz po ID z bazy danych IMGW</string>
     <string name="button_2">Wybierz po ID z bazy danych AirLy</string>
     <string name="button_3">Wyszukaj na mapie</string>
