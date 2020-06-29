@@ -24,35 +24,35 @@ public class imgw_activity extends AppCompatActivity {
         textViewResult = findViewById(R.id.text_view_result);
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://jsonplaceholder.typicode.com/")
+                .baseUrl("https://danepubliczne.imgw.pl/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
         JsonPlaceHolderApi jsonPlaceHolderApi = retrofit.create(JsonPlaceHolderApi.class);
 
-        Call<List<Post>> call = jsonPlaceHolderApi.getPosts();
+        Call<List<Stacja>> call = jsonPlaceHolderApi.getStacje();
 
-        call.enqueue(new Callback<List<Post>>() {
+        call.enqueue(new Callback<List<Stacja>>() {
             @Override
-            public void onResponse(Call<List<Post>> call, Response<List<Post>> response) {
+            public void onResponse(Call<List<Stacja>> call, Response<List<Stacja>> response) {
                 if (!response.isSuccessful()) {
                     textViewResult.setText("Code: " + response.code());
                     return;
                 }
-                List<Post> posts = response.body();
-                for (Post post : posts) {
+                List<Stacja> synop = response.body();
+                for (Stacja post : synop) {
                     String content = "";
-                    content += "ID: " + post.getId() + "\n";
-                    content += "User ID: " + post.getUserId() + "\n";
-                    content += "Title: " + post.getTitle() + "\n";
-                    content += "Text: " + post.getText() + "\n\n";
+                    content += "ID Stacji: " + Stacja.getId_stacji() + "\n";
+                    content += "Miasto: " + Stacja.getStacja() + "\n";
+                    content += "Data pomiaru: " + Stacja.getData_pomiaru() + "\n";
+                    content += "Godzina pomiaru: " + Stacja.getGodzina_pomiaru() + "\n\n";
 
                     textViewResult.append(content);
                 }
             }
 
             @Override
-            public void onFailure(Call<List<Post>> call, Throwable t) {
+            public void onFailure(Call<List<Stacja>> call, Throwable t) {
                 textViewResult.setText(t.getMessage());
             }
         });

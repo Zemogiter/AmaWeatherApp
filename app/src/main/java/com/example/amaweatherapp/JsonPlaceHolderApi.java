@@ -6,6 +6,6 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 
 public interface JsonPlaceHolderApi {
-    @GET("posts")
-    Call<List<Post>> getPosts();
+    @GET("api/data/synop")
+    Call<List<Stacja>> getStacje();
 }
