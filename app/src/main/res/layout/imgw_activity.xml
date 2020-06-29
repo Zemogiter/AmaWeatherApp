@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay"
         android:background="#FFFFFF">
-        <NestedScrollView
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -24,7 +24,7 @@
             android:id="@+id/text_view_result">
 
         </TextView>
-        </NestedScrollView>
+        </androidx.core.widget.NestedScrollView>
 
 
 
