@@ -2,7 +2,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.amaweatherapp">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.location.gps" />
+    <uses-feature android:name="android.hardware.location" />
+    <uses-feature android:name="android.hardware.location.network" />
 
     <application
         android:allowBackup="true"
@@ -25,13 +36,17 @@
             android:name="com.example.amaweatherapp.imgw_activity">
         </activity>
         <activity
-            android:name="com.example.amaweatherapp.AirLyLoginActivity">
+            android:name="com.example.amaweatherapp.airly.airly_activity">
         </activity>
         <activity
             android:name="com.example.amaweatherapp.map">
         </activity>
         <activity
             android:name="com.example.amaweatherapp.select_city">
+        </activity>
+        <activity
+            android:name="com.example.amaweatherapp.cityView"
+            android:parentActivityName=".select_city">
         </activity>
         <activity
             android:name="com.example.amaweatherapp.select_city_2">

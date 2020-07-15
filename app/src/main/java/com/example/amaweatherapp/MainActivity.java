@@ -7,7 +7,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.amaweatherapp.ui.main.SectionsPagerAdapter;
+import com.example.amaweatherapp.airly.airly_activity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
+        //SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
         FloatingActionButton fab = findViewById(R.id.fab);
 
         fab.setOnClickListener(new View.OnClickListener() {
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void openAIRLY(){
-        Intent intent = new Intent(this, AirLyLoginActivity.class);
+        Intent intent = new Intent(this, airly_activity.class);
         startActivity(intent);
     }
     public void openMAP(){

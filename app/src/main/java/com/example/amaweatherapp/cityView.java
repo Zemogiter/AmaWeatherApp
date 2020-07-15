@@ -1,5 +1,6 @@
 package com.example.amaweatherapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -13,14 +14,20 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class imgw_activity extends AppCompatActivity {
+public class cityView extends AppCompatActivity {
     private TextView textViewResult;
     private JsonPlaceHolderApi jsonPlaceHolderApi;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.imgw_activity);
+        setContentView(R.layout.city_view);
+
+        Intent intent = getIntent();
+        String text = intent.getStringExtra(select_city.EXTRA_TEXT);
+
+        TextView cityFieldDescription = (TextView) findViewById(R.id.cityFieldDescription);
+
+        cityFieldDescription.setText(text);
 
         textViewResult = findViewById(R.id.text_view_result);
 

@@ -10,4 +10,7 @@
     <string name="zapamietajHaslo">Zapamiętaj hasło</string>
     <string name="options">Opcje</string>
     <string name="option1">Opcja1</string>
+    <string name="aktualizuj">Aktualizuj!</string>
+    <string name="wpisz_nazw_miasta_bez_polskich_znak_w">Wpisz nazwę miasta (bez polskich znaków)</string>
+    <string name="przejd_dalej">Przejdź dalej</string>
 </resources>
